@@ -1,0 +1,34 @@
+# Carpetas de compilación y CMake
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Binarios y archivos objeto compilados
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+hh_demo
+
+# Entornos de IDEs y editores
+.vscode/
+.vs/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+.directory
+
+# Python 
+__pycache__/
+*.py[cod]
+.venv/
+venv/
