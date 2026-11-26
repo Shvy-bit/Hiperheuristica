@@ -1,0 +1,6 @@
+nombre,numItems,minWeight,maxWeight,binCapacity,iterations,seed
+Bloqueadores_Pesados_800,800,45,85,150,4000,666
+Alta_Dispersion_1500,1500,10,95,150,6000,777
+Mega_Contenedor_2500,2500,30,180,300,9000,888
+Ultra_Escala_4000,4000,25,140,250,12000,999
+Estrés_Maximo_6000,6000,40,220,400,15000,1010

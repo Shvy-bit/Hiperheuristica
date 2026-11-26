@@ -1,0 +1,3 @@
+nombre,numItems,minWeight,maxWeight,binCapacity,iterations,seed
+Limite_Practico_10k,10000,100,800,1000,25000,10000
+Limite_Maximo_20k,20000,500,9500,10000,50000,20000

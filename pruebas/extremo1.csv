@@ -1,0 +1,6 @@
+nombre,numItems,minWeight,maxWeight,binCapacity,iterations,seed
+Trampa_Tripletas_450,450,32,35,100,3000,111
+Trampa_Cuartetos_800,800,24,26,100,4500,222
+Trampa_Cuartetos_1500,1500,24,26,100,7000,333
+Trampa_Quintetos_1500,1500,19,21,100,7000,444
+Trampa_Sextetos_2400,2400,16,17,100,10000,555
