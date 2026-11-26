@@ -1,0 +1,8 @@
+nombre,numItems,minWeight,maxWeight,binCapacity,iterations,seed
+Pequeno_Holgado,40,10,40,100,300,101
+Mediano_Objetos_Pesados,80,25,65,100,500,12345
+Trampa_Tripletas_150,150,31,36,100,1000,333
+Trampa_Tripletas_300,300,31,36,100,2000,444
+Bloqueadores_Mixtos,250,15,85,100,1500,555
+Escala_Media_500,500,20,70,100,2500,666
+Escala_Alta_1000,1000,25,75,150,4000,777
