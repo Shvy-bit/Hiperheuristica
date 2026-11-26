@@ -1,0 +1,8 @@
+Escenario,Items,Capacidad,Iteraciones,Bins_Inicial,Obj_Inicial,Bins_Local,Obj_Local,Tiempo_Local_ms,Bins_HiperHeuristica,Obj_HiperHeuristica,Tiempo_HH_ms,Ahorro_Bins
+Pequeno_Holgado,40,100,300,13,12.3412,11,10.088,1.0272,11,10.0877,2.70448,0
+Mediano_Objetos_Pesados,80,100,500,56,55.4896,47,46.2786,4.41274,45,44.2236,7.68058,2
+Trampa_Tripletas_150,150,100,1000,60,59.2812,52,51.0638,3.65334,53,52.1006,10.9408,-1
+Trampa_Tripletas_300,300,100,2000,126,125.334,110,109.137,13.9977,113,112.18,49.2975,-3
+Bloqueadores_Mixtos,250,100,1500,170,169.45,133,132.139,10.8441,125,124.033,29.6521,8
+Escala_Media_500,500,100,2500,310,309.426,240,239.086,33.989,231,230.021,62.7106,9
+Escala_Alta_1000,1000,150,4000,404,403.303,347,346.066,83.6101,346,345.064,356.807,1

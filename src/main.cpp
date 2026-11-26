@@ -26,6 +26,7 @@ struct BenchmarkResult {
     double initialObj;
     int localBins;
     double localObj;
+    double localTimeMs;
     int hhBins;
     double hhObj;
     double hhTimeMs;
@@ -81,6 +82,8 @@ BenchmarkResult runBenchmark(const TestCase& tc) {
     res.initialObj = localProb.getObjectiveValue();
     res.initialBins = localProb.getBinCount();
 
+    auto startLocal = std::chrono::high_resolution_clock::now();
+
     double bestLocal = res.initialObj;
     for (int i = 0; i < tc.iterations; ++i) {
         localProb.applyHeuristic(i % 2);
@@ -92,6 +95,10 @@ BenchmarkResult runBenchmark(const TestCase& tc) {
             localProb.restoreState();
         }
     }
+
+    auto endLocal = std::chrono::high_resolution_clock::now();
+    res.localTimeMs = std::chrono::duration<double, std::milli>(endLocal - startLocal).count();
+
     res.localObj = bestLocal;
     res.localBins = localProb.getBinCount();
 
@@ -131,8 +138,9 @@ int main() {
 
     // Escribir encabezados del CSV de salida
     outCSV << "Escenario,Items,Capacidad,Iteraciones,Bins_Inicial,Obj_Inicial,"
-           << "Bins_Local,Obj_Local,Bins_HiperHeuristica,Obj_HiperHeuristica,"
-           << "Ahorro_Bins,Tiempo_ms\n";
+           << "Bins_Local,Obj_Local,Tiempo_Local_ms,"
+           << "Bins_HiperHeuristica,Obj_HiperHeuristica,Tiempo_HH_ms,"
+           << "Ahorro_Bins\n";
 
     for (const auto& tc : suite) {
         BenchmarkResult r = runBenchmark(tc);
@@ -146,10 +154,11 @@ int main() {
                << r.initialObj << ","
                << r.localBins << ","
                << r.localObj << ","
+               << r.localTimeMs << ","
                << r.hhBins << ","
                << r.hhObj << ","
-               << binsSaved << ","
-               << r.hhTimeMs << "\n";
+               << r.hhTimeMs << ","
+               << binsSaved << "\n";
     }
 
     outCSV.close();
